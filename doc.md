@@ -71,7 +71,7 @@ link OSI TCP/I{
 - Wireless...
 
 # The access layer
-ETHERNET frame
+## ETHERNET frame
 - 7       bytes preamble                   get the nics in sync
 - 1       byte  start frame delimiter(sfd) after that information associated with the ethernet frame 
 - 6       bytes destination mac address    destination mac address ON THIS NETWORK
@@ -80,4 +80,23 @@ ETHERNET frame
 - 46-1500 bytes DATA                       could be IPV4 IPV6 with tcp header and http header,...
 - 4       bytes frame check sequence(fcs)  error checking
 
+## ETHERNET switches
+Layer 2 of OSI because they make decision based on header of ethernet frame
 
+They have mac address tables that bind a mac adress and the physical ascociated port
+
+### How to build this address table
+
+When the first packet is sent
+
+It can add the source mac adress logically cause it knows the provider
+For the destination mac address if it is not in the table it is an unknown unicast.
+It will send the packet to every port (but the incoming one). The ones that are not concerned ignore the packet
+The switch ONLY adds SOURCE mac address to it's table 
+
+# IPV4 ADDRESS
+
+network   |host
+192.168.54.10
+
+255.255.255.0
