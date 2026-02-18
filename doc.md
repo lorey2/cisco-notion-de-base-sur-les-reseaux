@@ -1,3 +1,5 @@
+ipconfig
+
 SOHO
 
 Small office Home Office
@@ -100,3 +102,54 @@ network   |host
 192.168.54.10
 
 255.255.255.0
+
+# IPV4 Unicast Broadcast Multicast
+
+Unicast: 1->1 source must be unicast and destination too
+Broadcast: 1-> everyone in the lan (we send to x.x.x.255 or MAC FF:...:FF)
+Multicast: 1->everyone that listen to the ip chosen by the sender that must be in this range 224.0.0.0 to 239.255.255.255. It cannot be use through internet
+
+# reserved ip ranges
+## private ip range
+
+10.0.0.0/8
+172.16.0.0/12 (172.16.0.0 -> 172.31.255.255)
+192.168.0.0/16
+
+NAT (Network Address Translation) allows to translate private ip to public so it can go on internet
+
+## loopback address
+
+127.0.0.0/8 or 127.0.0.1 to 127.255.255.254
+use to send a packet to myself
+
+## link-local addresses
+
+169.254.0.0 /16 or 169.254.0.1 to 169.254.255.254
+Automatic Private IP Addressing (APIPA) addresses or self-assigned addresses.
+They are used by a Windows/(linux mac android too) client to self-configure in the event that the client cannot obtain an IP 
+
+# Class of public ip (deprecated)
+
+- Class A (0.0.0.0/8 to 127.0.0.0/8)         for large networks (/8) 16 mio hosts
+- Class B (128.0.0.0 /16 - 191.255.0.0 /16)  for moderate to large (/16) 65'000 hosts
+- Class C (192.0.0.0 /24 - 223.255.255.0 /24)for small network (/24) 256 hosts
+
+- Note: There is also a Class D multicast block consisting of 224.0.0.0 to 239.0.0.0 and a Class E experimental address block consisting of 240.0.0.0 - 255.0.0.0.
+
+# Assignement of IP Adresses
+
+Internet Assigned Numbers Authority (IANA) manages and allocates blocks of IP addresses to the Regional Internet Registries (RIRs)
+
+<img width="652" height="313" alt="image" src="https://github.com/user-attachments/assets/12ae58d3-83fd-452a-84a1-c76673a38873" />
+
+the router stops propagation of broadcast (arp request or dhcp discover messages) 
+arp is address resolution protocol. used to locate other devices
+Dynamic Host Configuration Protocol (DHCP) automatically gives private address
+
+
+
+
+
+
+
