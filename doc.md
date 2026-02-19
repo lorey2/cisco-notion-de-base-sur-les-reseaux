@@ -147,6 +147,26 @@ the router stops propagation of broadcast (arp request or dhcp discover messages
 arp is address resolution protocol. used to locate other devices
 Dynamic Host Configuration Protocol (DHCP) automatically gives private address
 
+# Static or Dynamic IPv4 Address Assignement
+
+to configure network for a host we need at minimum
+- ip address
+- subnet mask
+- default gateway: This identifies the networking device that the host uses to access the internet or another remote network. Usually it is the router ip. (it is used to chose the way if there is two routers)
+
+static addresses are usefull for printers servers,... with ip that should not change
+we should keep a list of these static ip
+
+DHCP is for host that can change frequently. Dynamic Host Configuration Protocol
+It automatically assign ipn4 address subnet mask default gateway. If ip no longer used it return to the pool
+
+# DHCv4 Configuration
+
+Host send DHCP Discover with broadcast (source 0.0.0.0 destination 255.255.255.255)
+DHCP servers respond with a DHCP OFFER with ip address subnet mask and default gateway
+Host send DHSC REQUEST to DHCP server
+DHCP server send back DHCP ACK
+
 
 
 
