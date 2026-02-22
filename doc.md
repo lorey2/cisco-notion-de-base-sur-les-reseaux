@@ -167,6 +167,16 @@ DHCP servers respond with a DHCP OFFER with ip address subnet mask and default g
 Host send DHSC REQUEST to DHCP server
 DHCP server send back DHCP ACK
 
+# Gateway
+
+way to exit the local network
+If no gateway address no way to access internet
+The gateway address is probably the router interface that the traffic would come to first
+Gateway ip HAS TO BE in the same local netwrok as the host
+
+# Nat
+network address translation
+private address host goes to router and has a table with a public ip
 
 
 
