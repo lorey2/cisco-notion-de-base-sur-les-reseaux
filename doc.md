@@ -178,6 +178,47 @@ Gateway ip HAS TO BE in the same local netwrok as the host
 network address translation
 private address host goes to router and has a table with a public ip
 
+# Routing table
+
+Same network no gateway. Different netwrok-> packed is send to gateway the router use its routing table
+
+The packet now have router mac address as source mac address and with arp the destination mac address
+
+So to resume the ip stay the same in the packet but the mac address change on every hop cause we dont know them
+
+# tcp vs udp
+
+transport layer
+upd is used for streaming/real time
+so we are not concerned for packet dropped
+
+tcp
+
+each packet has a sequence number
+ack response security,...
+
+# ports
+
+below 1024 "well known port"
+- web 80
+- FTP 21
+- Mail 25
+
+1 - 1023 'well known port'
+1024 - 49151 'registered ports'  either source or dest for specific application
+49152 - 65535 'private ports'    often source port
+host randomly assigned over 1024
+  web browser dest 80 source 5305
+  <img width="633" height="427" alt="image" src="https://github.com/user-attachments/assets/90266fdf-dcf1-4676-849d-12b23745afda" />
+<img width="1273" height="1065" alt="image" src="https://github.com/user-attachments/assets/61313ebf-2678-4847-a9e8-087c530765a6" />
+<img width="633" height="442" alt="image" src="https://github.com/user-attachments/assets/e0e60ee5-4c17-4c87-ba3c-c5c797dce201" />
+
+ip + port is socket
+socket pair is host socket + dest socket
+
+netstat shows socket
+<img width="790" height="368" alt="image" src="https://github.com/user-attachments/assets/46369153-bb7d-4b70-a439-6980f1172787" />
+
 
 
 
