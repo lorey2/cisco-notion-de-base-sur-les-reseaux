@@ -219,8 +219,70 @@ socket pair is host socket + dest socket
 netstat shows socket
 <img width="790" height="368" alt="image" src="https://github.com/user-attachments/assets/46369153-bb7d-4b70-a439-6980f1172787" />
 
+# Application layer
+
+client
+wwww.learnip.com 
+  dns lookup -> 172.16.10.50
+  
+tcp connection ip and port of client
+we now have socket src x.x.x.x:xxxx dest 172.16.10.50:80
+so for the connection the host send src dest and the serv replies dest src (his src and his dest)
+
+api restful. every elem is accesible via url
+  uses http as protocol
+    method are used logically (POST GET DELETE,...)
+  stateless
+  often json
 
 
+  [https://www.netacad.com/launch?id=f393c38f-b410-4d2b-8275-70e144273519&tab=curriculum&view=220c0250-4c5f-553d-80bf-b246b608670d]
+
+  URN uniform resource name (only the namespace of the resource)
+  [www.netacad.com/]
+  
+  URL uniform resource locator (give the protocol, HTTP(S), FTP, SSH,...)
+  [https://www.netacad.com/]
+  
+  URI uniform resource identifier same but give fragments too
+  [https://www.netacad.com/launch?id=f393c38f-b410-4d2b-8275-70e144273519&tab=curriculum&view=220c0250-4c5f-553d-80bf-b246b608670d]
+
+
+LAYER 7 HTTP
+LAYER 6/5 ...
+LAYER 4 TCP port 80/1112
+LAYER 3 IP 11.2.132.23 1.111.222.123
+LAYER 2 MAC ADDRESS
+LAYER 1 port
+
+LAYER 7: DNS SSH SMTP POP IMAP DHCP HTTP FTP
+
+nslookup give the ip associated to a domain name
+
+
+## FTP
+
+<img width="633" height="437" alt="image" src="https://github.com/user-attachments/assets/1aa274e8-3593-4513-9fc6-299e4aee078a" />
+
+## Telnet/Ssh
+
+telnet 23
+ssh 22
+
+## Email
+
+SMTP Simple mail transfer protocol port 25
+send to local mail server which may redirect it to another server if needed
+
+POP(3) Post Office Protocol port 110
+message are not kept to the server by default when downloaded
+
+IMAP4 Internet Message Access Protocol port 143
+same but keep message in serv until deleted
+
+Internet phone call
+Voice over ip VoIP analog to digital
+to call regular phone we must gateway to PSTN Public Switched Telephone Network
 
 
 
